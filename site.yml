@@ -1,0 +1,23 @@
+# Playbook to provision jenkins,docker,nginx and 
+
+- name: lets get this thing going
+  hosts: jenkins
+  become: yes
+  roles:
+    - jenkins
+    - docker
+    - nginx
+    # - deploy-app This is done now directly from the playbook
+
+  tags:
+    - bootstrap
+
+# - name: deploy
+#   hosts: webservers
+#   become: yes
+#   roles:
+    # - nginx
+  #   - docker
+  #   - deploy-app
+  # tags:
+  #   - deploy-app

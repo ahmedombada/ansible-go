@@ -1,0 +1,9 @@
+[jenkins]
+#freeradius-test
+jenkins-0 ansible_host=34.244.0.89
+
+[webservers]
+ngnix ansible_host=54.216.132.45    
+
+[all:vars]
+ansible_user=ahmed.ombada
